@@ -1,10 +1,9 @@
-// implement a stack in C language
-
 #include <stdio.h>
 #include <stdlib.h>
 
 #define MAX 10
 
+// Stack structure
 typedef struct stack {
     int top;
     int data[MAX];
@@ -41,8 +40,10 @@ int pop(stack *s) {
 int main() {
     stack s;
     init(&s);
+    // Push stuff onto the stack
     push(&s, 1);
     push(&s, 2);
     push(&s, 3);
+    // Pop stuff off the stack & print it
     printf("%d ", pop(&s));
 }
